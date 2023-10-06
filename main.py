@@ -3,10 +3,10 @@ from datetime import datetime
 import smtplib
 import time
 
-MY_LAT = 6.517760
-MY_LONG = 3.256870
-MY_EMAIL = "devdavdemo@gmail.com"
-PASSWORD = "oqwwnjexzrriaeza"
+MY_LAT = 6.517760 #PUT YOUR LATITUDE 
+MY_LONG = 3.256870 #PUT YOUR LONGITUDE
+MY_EMAIL = #YOUR EMAIL
+PASSWORD = #YOUR PASSWORD
 
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
@@ -47,7 +47,7 @@ while True:
                 connection.starttls()
                 connection.login(user=MY_EMAIL, password=PASSWORD)
                 connection.sendmail(from_addr=MY_EMAIL,
-                                    to_addrs="oladejidavid12@gmail.com",
+                                    to_addrs=#PUT THE RECEIVER EMAIL,
                                     msg="Subject:ISS Location\n\n"
                                         "Look Up, the International Space Station current "
                                         "location is close to you")
